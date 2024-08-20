@@ -13,21 +13,29 @@ console.log('task-3.js');
 //     Number.parseFloat()
 // }
 
-// const content = Npx;
-// const padding = Npx;
-// const border = Npx;
-// let N = Number;
 
 
-function getElementWidth(content, padding, border) {
-   
-   const total = content  + padding*2 + border*2;
-  
+
+
+function getElementWidth (content, padding, border) {
+    const contentWidth = Number.parseFloat(content);
+    const paddingWidth = Number.parseFloat(padding);
+    const borderWidth = Number.parseFloat(border);
+    
+    const elementWidth = contentWidth  + paddingWidth * 2 + borderWidth * 2 ;
+    
  
-    return `You ordered ${total} `
+    return `Your elements width is ${elementWidth}`
 
 
 }
+
+
+
+
  
-console.log (getElementWidth("50px", "8px", "4px"));
+console.log (getElementWidth("50px", "8px", "4px")); // 120
+console.log(getElementWidth("60px", "12px", "8.5px")); // 101
+console.log(getElementWidth("200px", "0px", "0px")); // 200
+
 
